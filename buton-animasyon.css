@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(115, 2, 243);
+}
+
+button{
+    display: block;
+    width: 180px;
+height: 40px;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgb(23, 112, 245);
+    color: aliceblue;
+    font-size: 1em;
+    border-radius: 10px;
+    border-color: rgb(45, 106, 236);
+    border-width: 1px;
+}
+button:hover{
+    background-color: rgb(54, 54, 228);
+    cursor: pointer;
+    animation: hover .3s linear infinite alternate  forwards;
+}
+
+button:focus{
+
+transition: 2s;
+cursor: pointer;
+animation: click1 .5s forwards linear, click2 2s forwards .5s;
+
+}
+
+@keyframes hover{
+
+    from{
+        background-color: rgb(54, 54, 228);
+        opacity: 1;
+    }
+
+    to{
+        background-color: rgb(23, 112, 245);
+        opacity: .5;
+    }
+}
+
+@keyframes click1{
+    from{ transform: translate(0%,0%);
+        
+    }
+    to{ transform: translate(50%, 50%); 
+    }
+}
+
+@keyframes click2{
+    to{
+    transform: translate(-200%, -500%) rotate(5turn) scale(0) ;
+}}
+
